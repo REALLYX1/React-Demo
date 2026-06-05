@@ -1,0 +1,17 @@
+// Điểm bắt đầu: gắn ứng dụng React vào thẻ #root trong index.html.
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+import { AppProvider } from './contexts/AppContext'
+import './index.css'
+
+createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <AppProvider>
+        <App />
+      </AppProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+)
