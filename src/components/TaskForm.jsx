@@ -1,4 +1,3 @@
-// Form nhỏ minh họa state và sự kiện submit trong React.
 import { useState } from 'react'
 
 export default function TaskForm({ onAddTask }) {

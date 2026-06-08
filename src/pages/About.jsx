@@ -1,4 +1,3 @@
-// Trang tĩnh giới thiệu mục đích của ứng dụng.
 export default function About() {
   return (
     <section className="about-page">

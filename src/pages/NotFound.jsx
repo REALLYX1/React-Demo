@@ -1,4 +1,3 @@
-// Trang hiển thị khi người dùng mở URL không tồn tại.
 import { Link } from 'react-router-dom'
 
 export default function NotFound() {

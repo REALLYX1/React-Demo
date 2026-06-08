@@ -1,4 +1,3 @@
-// TaskSummary tái sử dụng utility để hiển thị thống kê.
 import { getTaskSummary } from '../utils/getTaskSummary'
 
 export default function TaskSummary({ tasks }) {

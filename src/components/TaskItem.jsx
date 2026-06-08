@@ -1,4 +1,3 @@
-// TaskItem hiển thị một công việc và gửi sự kiện lên component cha.
 export default function TaskItem({ task, onToggle }) {
   return (
     <li className={task.completed ? 'task-item completed' : 'task-item'}>

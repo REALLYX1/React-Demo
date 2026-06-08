@@ -1,4 +1,3 @@
-// Trang chính kết hợp hook và các component công việc.
 import Loading from '../components/Loading'
 import TaskForm from '../components/TaskForm'
 import TaskItem from '../components/TaskItem'

@@ -1,4 +1,3 @@
-// Trang đầu giới thiệu ngắn về ứng dụng.
 import { Link } from 'react-router-dom'
 
 export default function Dashboard() {

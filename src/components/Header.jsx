@@ -1,4 +1,3 @@
-// Header hiển thị thông tin dùng chung lấy từ Context.
 import { useAppContext } from '../contexts/AppContext'
 
 export default function Header() {

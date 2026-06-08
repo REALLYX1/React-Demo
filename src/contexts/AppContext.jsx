@@ -1,4 +1,3 @@
-// Context lưu thông tin đơn giản cần dùng ở nhiều nơi.
 import { createContext, useContext } from 'react'
 
 const AppContext = createContext(null)

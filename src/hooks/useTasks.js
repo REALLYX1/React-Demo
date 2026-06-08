@@ -1,4 +1,3 @@
-// Custom hook quản lý dữ liệu và thao tác của danh sách công việc.
 import { useEffect, useState } from 'react'
 import { getTasks } from '../services/taskService'
 
