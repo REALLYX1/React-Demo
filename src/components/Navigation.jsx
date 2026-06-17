@@ -4,9 +4,9 @@ export default function Navigation() {
   return (
     <div className="navigation-wrap">
       <nav className="navigation">
-        <NavLink to="/">Dashboard</NavLink>
-        <NavLink to="/tasks">Công việc</NavLink>
-        <NavLink to="/about">Thông tin</NavLink>
+        <NavLink to="/">Trang chính</NavLink>
+        <NavLink to="/tasks">Việc cần làm</NavLink>
+        <NavLink to="/about">Giới thiệu</NavLink>
       </nav>
     </div>
   )

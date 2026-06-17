@@ -7,11 +7,11 @@ export default function TaskSummary({ tasks }) {
     <div className="summary">
       <div>
         <strong>{summary.total}</strong>
-        <span>Tất cả</span>
+        <span>Tổng</span>
       </div>
       <div>
         <strong>{summary.completed}</strong>
-        <span>Đã xong</span>
+        <span>Xong</span>
       </div>
       <div>
         <strong>{summary.remaining}</strong>

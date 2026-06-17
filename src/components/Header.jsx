@@ -7,7 +7,7 @@ export default function Header() {
     <header className="header">
       <div className="header-inner">
         <div>
-          <p className="brand-label">Today</p>
+          <p className="brand-label"></p>
           <h1>{name}</h1>
         </div>
         <span>{student}</span>

@@ -2,25 +2,22 @@ export default function About() {
   return (
     <section className="about-page">
       <div className="page-heading">
-        <p className="eyebrow">Thông tin</p>
-        <h2>Focus Tasks</h2>
-        <p>
-          Ứng dụng nhỏ để ghi lại các việc cần làm trong ngày.
-        </p>
+        <p className="eyebrow">Giới thiệu</p>
+        <h2>Việc làm hằng ngày</h2>
       </div>
 
       <div className="feature-grid">
         <article>
-          <strong>Ghi việc</strong>
-          <p>Thêm công việc mới vào danh sách.</p>
+          <strong>Thêm việc</strong>
+          <p>Ghi nhanh việc cần làm.</p>
         </article>
         <article>
-          <strong>Cập nhật</strong>
-          <p>Đánh dấu việc đã hoàn thành.</p>
+          <strong>Tick hoàn thành</strong>
+          <p>Đổi trạng thái khi làm xong.</p>
         </article>
         <article>
-          <strong>Theo dõi</strong>
-          <p>Xem số việc đã xong và còn lại.</p>
+          <strong>Xem tiến độ</strong>
+          <p>Biết còn bao nhiêu việc chưa xong.</p>
         </article>
       </div>
     </section>

@@ -19,7 +19,7 @@ export default function TaskForm({ onAddTask }) {
       <input
         value={title}
         onChange={(event) => setTitle(event.target.value)}
-        placeholder="Thêm công việc..."
+        placeholder="Nhập việc cần làm..."
       />
       <button type="submit">Thêm</button>
     </form>

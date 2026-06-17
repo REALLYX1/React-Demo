@@ -4,8 +4,8 @@ const AppContext = createContext(null)
 
 export function AppProvider({ children }) {
   const appInfo = {
-    name: 'Focus Tasks',
-    student: 'Công việc cá nhân',
+    name: 'Check List',
+    student: 'Việc cá nhân',
   }
 
   return <AppContext.Provider value={appInfo}>{children}</AppContext.Provider>

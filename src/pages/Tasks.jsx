@@ -15,7 +15,7 @@ export default function Tasks() {
     <section className="page-grid">
       <div className="page-heading">
         <p className="eyebrow">Công việc</p>
-        <h2>Danh sách hôm nay</h2>
+        <h2>Danh sách công việc hôm nay</h2>
         <p>Thêm việc mới hoặc đánh dấu việc đã làm xong.</p>
       </div>
 

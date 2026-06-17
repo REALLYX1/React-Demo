@@ -1,3 +1,3 @@
 export default function Loading() {
-  return <p className="message">Đang tải dữ liệu...</p>
+  return <p className="message">Đang tải...</p>
 }

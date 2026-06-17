@@ -4,20 +4,20 @@ export default function Dashboard() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <p className="eyebrow">Tổng quan</p>
+        <p className="eyebrow">Công việc</p>
         <h2>Việc cần làm hôm nay</h2>
         <p>
-          Ghi lại các việc cần xử lý và đánh dấu khi đã hoàn thành.
+          Danh sách công việc
         </p>
         <Link className="primary-link" to="/tasks">
-          Xem danh sách
+          Mở danh sách
         </Link>
       </div>
 
       <div className="hero-panel">
-        <p>Hôm nay</p>
+        <p>Tiến độ</p>
         <strong>3 công việc</strong>
-        <span>1 đã xong, 2 còn lại</span>
+        <span>1 xong, 2 chưa xong</span>
       </div>
     </section>
   )
