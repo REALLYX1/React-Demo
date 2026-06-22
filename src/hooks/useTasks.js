@@ -4,17 +4,36 @@ import { getTasks } from '../services/taskService'
 export function useTasks() {
   const [tasks, setTasks] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  async function loadTasks(signal) {
+    try {
+      setLoading(true)
+      setError('')
+      const data = await getTasks(signal)
+      setTasks(data)
+    } catch (requestError) {
+      if (requestError.name !== 'AbortError') {
+        setError('Không thể tải công việc. Vui lòng thử lại.')
+      }
+    } finally {
+      if (!signal?.aborted) {
+        setLoading(false)
+      }
+    }
+  }
 
   useEffect(() => {
-    getTasks().then((data) => {
-      setTasks(data)
-      setLoading(false)
-    })
+    const controller = new AbortController()
+
+    loadTasks(controller.signal)
+
+    return () => controller.abort()
   }, [])
 
   function addTask(title) {
     const newTask = {
-      id: Date.now(),
+      id: `local-${Date.now()}`,
       title,
       completed: false,
     }
@@ -24,11 +43,11 @@ export function useTasks() {
 
   function toggleTask(id) {
     setTasks((currentTasks) =>
-      currentTasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task,
+      currentTasks.map((item) =>
+        item.id === id ? { ...item, completed: !item.completed } : item,
       ),
     )
   }
 
-  return { tasks, loading, addTask, toggleTask }
+  return { tasks, loading, error, loadTasks, addTask, toggleTask }
 }

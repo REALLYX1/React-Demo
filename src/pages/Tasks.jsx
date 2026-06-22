@@ -5,7 +5,7 @@ import TaskSummary from '../components/TaskSummary'
 import { useTasks } from '../hooks/useTasks'
 
 export default function Tasks() {
-  const { tasks, loading, addTask, toggleTask } = useTasks()
+  const { tasks, loading, error, loadTasks, addTask, toggleTask } = useTasks()
 
   if (loading) {
     return <Loading />
@@ -24,6 +24,15 @@ export default function Tasks() {
       <div className="task-panel">
         <TaskForm onAddTask={addTask} />
 
+        {error && (
+          <div className="message error-message">
+            <span>{error}</span>
+            <button type="button" onClick={() => loadTasks()}>
+              Thử lại
+            </button>
+          </div>
+        )}
+
         {tasks.length === 0 ? (
           <p className="message">Chưa có công việc nào.</p>
         ) : (
@@ -34,6 +43,11 @@ export default function Tasks() {
           </ul>
         )}
       </div>
+
+      <p className="api-note">
+        Dữ liệu tiếng Anh được lấy từ GitHub Issues API. Công việc thêm mới và
+        trạng thái đánh dấu chỉ được lưu tạm trong trình duyệt.
+      </p>
     </section>
   )
 }
