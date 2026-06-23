@@ -1,3 +1,4 @@
+import ApiError from '../components/ApiError'
 import Loading from '../components/Loading'
 import TaskForm from '../components/TaskForm'
 import TaskItem from '../components/TaskItem'
@@ -24,14 +25,7 @@ export default function Tasks() {
       <div className="task-panel">
         <TaskForm onAddTask={addTask} />
 
-        {error && (
-          <div className="message error-message">
-            <span>{error}</span>
-            <button type="button" onClick={() => loadTasks()}>
-              Thử lại
-            </button>
-          </div>
-        )}
+        {error && <ApiError message={error} onRetry={() => loadTasks()} />}
 
         {tasks.length === 0 ? (
           <p className="message">Chưa có công việc nào.</p>
